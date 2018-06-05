@@ -1,13 +1,8 @@
 # thesisdownmq
 
-This project was inspired by the bookdown and thesisdown packages for Macquarie University
+This project was inspired by the bookdown and thesisdown packages for Macquarie University.
 
-Currently, the PDF and gitbook versions are fully-functional. (The word and epub versions are developmental, have no templates behind them, and are essentially calls to the appropriate functions in bookdown. There is no plan to further develop these, in fact, files related to these will be removed in the near future.)
-
-The current outputs for the two functional versions are here:
-
-PDF (Generating LaTeX file is available here with other files at in the book directory.)
-gitbook
+Currently, the PDF version is fully-functional. (The word, gitbook and epub versions are developmental, have no templates behind them, and are essentially calls to the appropriate functions in bookdown.)
 
 Under the hood, the Reed College LaTeX template was updated to ensure that documents conform precisely to submission standards at Macquarie University. At the same time, composition and formatting can be done using lightweight markdown syntax, and R code and its output can be seamlessly included using rmarkdown.
 
