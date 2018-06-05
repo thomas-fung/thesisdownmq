@@ -1,6 +1,6 @@
 # thesisdownmq
 
-This project was inspired by the bookdown and thesisdown packages for Macquarie University.
+This project was inspired by the bookdown and thesisdown packages.
 
 Currently, the PDF version is fully-functional. (The word, gitbook and epub versions are developmental, have no templates behind them, and are essentially calls to the appropriate functions in bookdown.)
 
