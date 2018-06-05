@@ -26,4 +26,8 @@ devtools::install_github("thomas-htf/thesisdowndmq")
 
 ![New R Markdown](thesis.rmd.png)
 
-Note that this will currently only **Knit** if you name the directory `index` as shown above.
+Note that this will currently only Knit if you name the directory index as shown above.
+
+4) Knit the index.Rmd file to get the book in PDF format.
+
+5) Edit the individual chapter R Markdown files as you wish and then re-run step (4) again.
