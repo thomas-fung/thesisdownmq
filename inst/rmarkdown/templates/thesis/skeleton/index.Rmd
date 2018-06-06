@@ -1,4 +1,6 @@
 ---
+# This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ). 
+# Created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
 author: 'Your Name'
 date: 'May'
 institution: 'Macquarie University'
