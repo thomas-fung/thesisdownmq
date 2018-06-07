@@ -19,12 +19,12 @@ To use **thesisdowndmq** from within RStudio:
 ```S
 install.packages("devtools")
 install.packages("bookdown")
-devtools::install_github("thomas-htf/thesisdowndmq")
+devtools::install_github("thomas-fung/thesisdowndmq")
 ```
 
 3) Use the New R Markdown dialog to select Thesis:
 
-![New R Markdown](thesis.rmd.png)
+![New R Markdown](https://github.com/thomas-fung/thesisdownmq/blob/master/thesis_rmd.png)
 
 Note that this will currently only Knit if you name the directory index as shown above.
 
