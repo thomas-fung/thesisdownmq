@@ -24,7 +24,7 @@ devtools::install_github("thomas-htf/thesisdowndmq")
 
 3) Use the New R Markdown dialog to select Thesis:
 
-![New R Markdown](thesis.rmd.png)
+![New R Markdown](thesis_rmd.png)
 
 Note that this will currently only Knit if you name the directory index as shown above.
 
