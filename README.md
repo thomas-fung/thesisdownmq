@@ -22,7 +22,7 @@ install.packages("bookdown")
 devtools::install_github("thomas-fung/thesisdowndmq")
 ```
 
-3) Use the New R Markdown dialog to select Thesis:
+3) Use the New R Markdown dialog to select MQ Thesis:
 
 ![New R Markdown](thesis_rmd.png)
 
