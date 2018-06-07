@@ -56,14 +56,14 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 -->
 
 ```{r include_packages, include = FALSE}
-# This chunk ensures that the thesisdown package is
-# installed and loaded. This thesisdown package includes
+# This chunk ensures that the thesisdownmq package is
+# installed and loaded. This thesisdownmq package includes
 # the template files for the thesis.
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
 if(!require(thesisdown))
-  devtools::install_github("ismayc/thesisdown")
-library(thesisdown)
+  devtools::install_github("thomas-fung/thesisdownmq")
+library(thesisdownmq)
 ```
 
 <!-- You'll need to include the order that you'd like Rmd files to appear in the _bookdown.yml file for
@@ -98,12 +98,12 @@ Having your code and commentary all together in one place has a plethora of bene
 
 Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
 
-# R Markdown Basics {#rmd-basics}
- `r if(knitr:::is_latex_output()) paste(readLines("01-chap1.Rmd"), collapse = '\n  ')`
+```{r child = '01-chap1.Rmd'}
+```
 
-# The First Appendix
 
-`r if(knitr:::is_latex_output()) paste(readLines("05-appendix.Rmd"), collapse = '\n  ')`
+```{r child = '05-appendix.Rmd'}
+```
 
 <!--
 The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
@@ -116,6 +116,6 @@ If you'd like to change the name of the bibliography to something else,
 delete "References" and replace it.
 -->
 
-# References {-}
+```{r child = '99-references.Rmd'}
+```
 
-`r if(knitr:::is_latex_output()) paste(readLines("99-references.Rmd"), collapse = '\n  ')`

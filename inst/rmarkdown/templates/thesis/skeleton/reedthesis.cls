@@ -310,7 +310,7 @@
     Department of \@department\\
     \@date\, \number\the\year\\
     \vfil
-    \includegraphics[width=0.3\columnwidth]{MQlogo}\par
+    \includegraphics[width=0.3\columnwidth]{./figure/MQlogo}\par
     \bigskip
     {\bf \fontsize{17}{14} \selectfont \@division \par }
     \vfil
