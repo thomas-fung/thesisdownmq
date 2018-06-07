@@ -1,4 +1,5 @@
-name:  Thesis
+name: MQ Thesis
 description: >
- Template for creating a HDR Thesis at Macquarie University using R Markdown based on the Duke StatSci LaTeX template and the R bookdown & thesisdown packages.
+ Template for creating a HDR Thesis at Macquarie University using R 
+ Markdown based on the Duke StatSci LaTeX template and the R bookdown & thesisdown packages.
 
