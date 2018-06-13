@@ -19,7 +19,7 @@ Depends:
   bookdown,
   knitr
 URL: http://stat.mq.edu.au/
-BugReports: https//github.com/thomas-htf/thesisdownmq
+BugReports: https//github.com/thomas-fung/thesisdownmq
 License: MIT
 Encoding: UTF-8
 LazyData: true
