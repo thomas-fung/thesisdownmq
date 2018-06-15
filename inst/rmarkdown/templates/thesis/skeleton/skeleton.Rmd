@@ -12,9 +12,7 @@ title: 'Title: TBD'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  thesisdown::thesis_pdf: default
-# If you are creating a PDF you'll need to write your preliminary content here or
-# use code similar to line 17 for the files.  
+  thesisdownmq::thesis_pdf: default
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
 # If you'd rather include the preliminary content in files instead of inline
@@ -41,7 +39,7 @@ lof: true
 ---
 <!--
 This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ). 
-Created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
+Created by Thomas Fung & Justin Wishart (MQ) (15 June 2018). 
 -->
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
@@ -61,7 +59,7 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 # the template files for the thesis.
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
-if(!require(thesisdown))
+if(!require(thesisdownmq))
   devtools::install_github("thomas-fung/thesisdownmq")
 library(thesisdownmq)
 ```
@@ -97,25 +95,3 @@ Having your code and commentary all together in one place has a plethora of bene
 **Who should use it?**
 
 Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
-
-```{r child = '01-chap1.Rmd'}
-```
-
-
-```{r child = '05-appendix.Rmd'}
-```
-
-<!--
-The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
--->
-
-\backmatter
-
-<!-- 
-If you'd like to change the name of the bibliography to something else,
-delete "References" and replace it.
--->
-
-```{r child = '99-references.Rmd'}
-```
-
