@@ -1,6 +1,6 @@
 ```{r include_packages_2, include = FALSE}
-# This chunk ensures that the thesisdown package is
-# installed and loaded. This thesisdown package includes
+# This chunk ensures that the thesisdownmq package is
+# installed and loaded. This thesisdownmq package includes
 # the template files for the thesis and also two functions
 # used for labeling and referencing
 if(!require(devtools))
@@ -11,11 +11,11 @@ if(!require(ggplot2))
     install.packages("ggplot2", repos = "http://cran.rstudio.com")
 if(!require(ggplot2))
     install.packages("bookdown", repos = "http://cran.rstudio.com")
-if(!require(thesisdown)){
+if(!require(thesisdownmq)){
   library(devtools)
-  devtools::install_github("ismayc/thesisdown")
+  devtools::install_github("thomas-fung/thesisdownmq")
   }
-library(thesisdown)
+library(thesisdownmq)
 flights <- read.csv("data/flights.csv")
 ```
 
@@ -62,13 +62,13 @@ If you need a graphic or tabular material to be part of the text, you can just p
 -->
 
 
-In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reedlogo", and specify that this is a figure.  Make note of the different **R** chunk options that are given in the R Markdown file (not shown in the knitted document).
+In the **R** chunk below, we will load in a picture stored as `random-field` in the `figure` subdirectory from our main directory.  We then give it the caption of "Random Field", the label of "randfield", and specify that this is a figure.  Make note of the different **R** chunk options that are given in the R Markdown file (not shown in the knitted document).
 
-```{r reedlogo, fig.cap="Reed logo"}
-include_graphics(path = "figure/reed.jpg")
+```{r randfield, fig.cap="Random Field"}
+include_graphics(path = "figure/random-field.png")
 ```
 
-Here is a reference to the Reed logo: Figure \@ref(fig:reedlogo).  Note the use of the `fig:` code here.  By naming the **R** chunk that contains the figure, we can then reference that figure later as done in the first sentence here.  We can also specify the caption for the figure via the R chunk option `fig.cap`.
+Here is a reference to the Reed logo: Figure \@ref(fig:randfield).  Note the use of the `fig:` code here.  By naming the **R** chunk that contains the figure, we can then reference that figure later as done in the first sentence here.  We can also specify the caption for the figure via the R chunk option `fig.cap`.
 
 \clearpage 
 
@@ -89,23 +89,23 @@ A table linking these carrier codes to airline names is available at <https://gi
 
 \clearpage
 
-Next, we will explore the use of the `out.extra` chunk option, which can be used to shrink or expand an image loaded from a file by specifying `"scale= "`. Here we use the mathematical graph stored in the "subdivision.pdf" file.
+Next, we will explore the use of the `out.extra` chunk option, which can be used to shrink or expand an image loaded from a file by specifying `"scale= "`. Here we use the mathematical graph stored in the "math-graph.pdf" file.
 
-```{r subd, results="asis", echo=FALSE, fig.cap="Subdiv. graph", out.extra="scale=0.75"}
-include_graphics("figure/subdivision.pdf")
+```{r mathg, results="asis", echo=FALSE, fig.cap="Subdiv. graph", out.extra="scale=0.75"}
+include_graphics("figure/math-graph.pdf")
 ```
 
-Here is a reference to this image: Figure \@ref(fig:subd).  Note that `echo=FALSE` is specified so that the **R** code is hidden in the document.
+Here is a reference to this image: Figure \@ref(fig:mathg).  Note that `echo=FALSE` is specified so that the **R** code is hidden in the document.
 
 **More Figure Stuff**
 
 Lastly, we will explore how to rotate and enlarge figures using the `out.extra` chunk option.  (Currently this only works in the PDF version of the book.)
 
-```{r subd2, results="asis", echo=FALSE, out.extra="angle=180, scale=1.1", fig.cap="A Larger Figure, Flipped Upside Down"}
-include_graphics("figure/subdivision.pdf")
+```{r mathg2, results="asis", echo=FALSE, out.extra="angle=180, scale=1.1", fig.cap="A Larger Figure, Flipped Upside Down"}
+include_graphics("figure/math-graph.pdf")
 ```
 
-As another example, here is a reference: Figure \@ref(fig:subd2).  
+As another example, here is a reference: Figure \@ref(fig:mathg2).  
 
 ## Footnotes and Endnotes
 
