@@ -19,7 +19,7 @@ To use **thesisdowndmq** from within RStudio:
 ```S
 install.packages("devtools")
 install.packages("bookdown")
-devtools::install_github("thomas-fung/thesisdowndmq")
+devtools::install_github("thomas-fung/thesisdownmq")
 ```
 
 3) Use the New R Markdown dialog to select MQ Thesis:
