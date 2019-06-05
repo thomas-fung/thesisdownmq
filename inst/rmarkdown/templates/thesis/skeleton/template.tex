@@ -171,10 +171,17 @@ $if(acknowledgements)$
   \end{acknowledgements}
 $endif$
 
-$if(lot)$
+$if(lop)$
 \begin{lop}
 	$lop$
 \end{lop}
+$endif$
+
+
+$if(dedication)$
+\begin{dedication}
+	$dedication$
+\end{dedication}
 $endif$
 
 $if(abstract)$
@@ -201,12 +208,6 @@ $if(lof)$
 $endif$
 
 
-
-$if(dedication)$
-  \begin{dedication}
-    $dedication$
-  \end{dedication}
-$endif$
 
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
