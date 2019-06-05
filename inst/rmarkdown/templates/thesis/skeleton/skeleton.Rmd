@@ -1,13 +1,15 @@
 ---
 # This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ). 
-# Created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
+# Originally created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
 author: 'Your Name'
-date: 'May'
-institution: 'Macquarie University'
+date: 'May' # just need the month. Year will be added automatically. 
+institution: 'Macquarie University' 
+report_type: 'thesis' # is this a paper/report/thesis? 
 division: "Examiner's Copy"
 # replace above with " " if this is not an examiner's copy
-department: 'Statistics'
-degree: 'Master of Research'
+department: 'Mathematics and Statistics'
+degree_or_unit: 'degree'
+degree_name_or_unit_no: 'Master of Research' # or 'STAT825'
 title: 'Title: TBD'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site

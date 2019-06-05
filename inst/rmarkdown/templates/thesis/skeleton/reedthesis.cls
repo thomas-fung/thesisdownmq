@@ -210,6 +210,12 @@
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
 \global\let\@altadvisor\@empty
+\def\reporttype#1{\gdef \@reporttype{#1}}
+\def\@reporttype{\@latex@warning@no@line{No \noexpand\reporttype given}}
+\def\degreeorunit#1{\gdef \@degreeorunit{#1}}
+\def\@degreeorunit{\@latex@warning@no@line{No \noexpand\degreeorunit given}}
+\def\degreename#1{\gdef \@degreename{#1}}
+\def\@degreename{\@latex@warning@no@line{No \noexpand\degreename given}}
 \newif\if@altadvisor
 \@altadvisorfalse
 
@@ -305,8 +311,8 @@
     {\bf \fontsize{12}{14}\selectfont \@author}\\[2cm]
     %\centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Thesis submitted to \@institution\\
-    for the degree of \@degree\\
+    A \@reporttype\ submitted to \@institution\\
+    for the \@degreeorunit\ of \@degreename\\
     Department of \@department\\
     \@date\, \number\the\year\\
     \vfil
@@ -335,8 +341,8 @@
 \begin{minipage}{4in}
 \parindent=0pt
 Except where acknowledged in the customary manner, the material
-presented in this thesis is, to the best of my knowledge, original and
-has not been submitted in whole or part for a degree in any university.
+presented in this \@reporttype\ is, to the best of my knowledge, original and
+has not been submitted in whole or part for a \@degreeorunit\ in any university.
 \par
 \vspace{.5in}
 \hbox to 4in{\hfil\shortstack{\vrule width 3in height 0.4pt \\ \@author}}
