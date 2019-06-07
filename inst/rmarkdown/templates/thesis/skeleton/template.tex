@@ -166,6 +166,11 @@ $endif$
 
 
 \frontmatter % this stuff will be roman-numbered
+
+$if(openright)$
+\csname @openrightfalse\endcsname
+$endif$
+
 \pagestyle{headings} % this removes page numbers from the frontmatter
 
 $if(acknowledgements)$

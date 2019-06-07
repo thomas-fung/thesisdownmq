@@ -219,6 +219,7 @@
 \newif\if@altadvisor
 \@altadvisorfalse
 
+
 \renewcommand\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
@@ -287,6 +288,7 @@
 \else
   \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
 \fi
+
 
 % I hacked the title page to all be the same font size
 % as requested by the library, BTS 2005
