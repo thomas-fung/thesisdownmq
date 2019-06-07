@@ -114,6 +114,7 @@
 %	or
 %	\fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
 %	\fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
+\setlength{\headheight}{14.5pt}
   \pagestyle{fancy}
 
 % Psych majors: You do not need the following six lines, as it conflicts with apacite, so comment them out.
@@ -165,6 +166,7 @@
                       \@makechapterhead{#2}%
                       \@afterheading
                     \fi}
+
 
 \newcommand{\RTcleardoublepage}{
 	\clearpage\if@twoside \ifodd\c@page\else
