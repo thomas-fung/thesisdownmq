@@ -10,7 +10,7 @@ division: "Examiner's Copy"
 department: 'Mathematics and Statistics'
 degree_or_unit: 'degree' # or 'unit'
 degree_name_or_unit_no: 'Master of Research' # or 'STAT825'
-openright: true
+openright: true #new chapter to always open on the right; false to disable it
 title: 'Title: TBD'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
