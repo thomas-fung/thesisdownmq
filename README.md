@@ -8,6 +8,8 @@ Under the hood, the Reed College LaTeX template was updated to ensure that docum
 
 Using **thesisdownmq** has some prerequisites which are described below. To compile PDF documents using **R**, you are going to need to have LaTeX installed. It can be downloaded for Windows at http://http://miktex.org/download and for Mac at http://tug.org/mactex/mactex-download.html. Follow the instructions to install the necessary packages after downloading the (somewhat large) installer files. You may need to install a few extra LaTeX packages on your first attempt to knit as well.
 
+If you are simply looking for a Macquarie University thesis LaTeX template, you shoudl check this out: https://github.com/aalexei/mqthesis.
+
 ### Using thesisdowndmq from Thomas Fung's GitHub
 
 To use **thesisdowndmq** from within RStudio:
