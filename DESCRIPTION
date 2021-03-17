@@ -1,7 +1,7 @@
 Package: thesisdownmq
 Title: An updated R Markdown thesis template using the bookdown package for creating 
   Macquarie University HDR theses
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: as.person(c(
   "Thomas Fung <thomas.fung@mq.edu.au> [aut, cre]",
   "Justin Wishart <justin.wishart@mq.edu.au> [aut]"

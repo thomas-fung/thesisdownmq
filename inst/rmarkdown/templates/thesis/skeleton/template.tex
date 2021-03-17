@@ -4,8 +4,10 @@
 % Most of the work for the document class was done by Sam Noble (SN), as well as this
 % template. Later comments etc. by Ben Salzberg (BTS). Additional
 % restructuring and APA support by Jess Youngberg (JY).
-
-% See http://web.reed.edu/cis/help/latex.html for help. There are a
+% Your comments and suggestions are more than welcome; please email
+% them to cus@reed.edu
+%
+% See https://www.reed.edu/cis/help/LaTeX/index.html for help. There are a
 % great bunch of help pages there, with notes on
 % getting started, bibtex, etc. Go there and read it if you're not
 % already familiar with LaTeX.
@@ -28,7 +30,7 @@
 % Packages are extensions to the basic LaTeX functions. Whatever you
 % want to typeset, there is probably a package out there for it.
 % Chemistry (chemtex), screenplays, you name it.
-% Check out CTAN to see: http://www.ctan.org/
+% Check out CTAN to see: https://www.ctan.org/
 %%
 \usepackage{graphicx,latexsym}
 \usepackage{amsmath}
@@ -41,6 +43,8 @@
 \usepackage{lmodern}
 \usepackage{float}
 \floatplacement{figure}{H}
+% Thanks, @Xyv
+\usepackage{calc}
 % End of CII addition
 \usepackage{rotating}
 \usepackage[top=1.5cm, bottom=2.0cm, inner=3.5cm, outer=2.0cm, includehead]{geometry}
@@ -116,6 +120,36 @@ $endif$
 }
 \makeatother
 
+% From {rticles}
+$if(csl-refs)$
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc} % for calculating minipage widths
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+
 \renewcommand{\contentsname}{Table of Contents}
 % End of CII addition
 
@@ -158,19 +192,14 @@ $endfor$
 %
 
 \begin{document}
-$if(notopenright)$
-\csname @openrightfalse\endcsname
-$endif$
 
 % Everything below added by CII
 $if(title)$
   \maketitle
 $endif$
 
-
 \frontmatter % this stuff will be roman-numbered
-
-\pagestyle{headings} % this removes page numbers from the frontmatter
+\pagestyle{empty} % this removes page numbers from the frontmatter
 
 $if(acknowledgements)$
   \begin{acknowledgements}
@@ -178,30 +207,15 @@ $if(acknowledgements)$
   \end{acknowledgements}
 $endif$
 
-$if(lop)$
-\begin{lop}
-	$lop$
-\end{lop}
+$if(preface)$
+  \begin{preface}
+    $preface$
+  \end{preface}
 $endif$
-
-
-$if(dedication)$
-\begin{dedication}
-	$dedication$
-\end{dedication}
-$endif$
-
-$if(abstract)$
-  \begin{abstract}
-    $abstract$
-  \end{abstract}
-$endif$
-
-
-
 
 $if(toc)$
   \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+  \setcounter{secnumdepth}{$toc-depth$}
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents
 $endif$
@@ -214,7 +228,17 @@ $if(lof)$
   \listoffigures
 $endif$
 
+$if(abstract)$
+  \begin{abstract}
+    $abstract$
+  \end{abstract}
+$endif$
 
+$if(dedication)$
+  \begin{dedication}
+    $dedication$
+  \end{dedication}
+$endif$
 
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
