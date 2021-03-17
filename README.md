@@ -33,3 +33,20 @@ Note that this will currently only Knit if you name the directory index as shown
 4) Knit the index.Rmd file to get the book in PDF format.
 
 5) Edit the individual chapter R Markdown files as you wish and then re-run step (4) again.
+
+## How to cite 
+
+```bibtex
+@misc{thesisdownmq2019,
+  author = {Fung, Thomas and Wishart, Justin},
+  title = {thesisdownmq},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/thomas-fung/thesisdownmq}}
+}
+```
+
+*NOTE: If you've used this template to write your thesis, drop me a line at thomas.fung.dr@gmail.com and I'll add a link to showcase it!*
+
+
