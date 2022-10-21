@@ -220,6 +220,8 @@
 \def\@degreename{\@latex@warning@no@line{No \noexpand\degreename given}}
 \newif\if@altadvisor
 \@altadvisorfalse
+\def\statement#1{\gdef \@statement{#1}}
+\def\@statement{\@latex@warning@no@line{No \noexpand\statement given}}
 
 
 \renewcommand\l@chapter[2]{%
@@ -317,7 +319,7 @@
     \vfil
     A \@reporttype\ submitted to \@institution\\
     for the \@degreeorunit\ of \@degreename\\
-    Department of \@department\\
+    \@department\\
     \@date\, \number\the\year\\
     \vfil
     \includegraphics[width=0.3\columnwidth]{./figure/MQlogo}\par
@@ -338,25 +340,33 @@
   Typesetin \LaTeXe{}.
   \end{center}
   }
-  \newpage
-%% Signature page
-  {
-  \begin{center}
-\begin{minipage}{4in}
-\parindent=0pt
-Except where acknowledged in the customary manner, the material
-presented in this \@reporttype\ is, to the best of my knowledge, original and
-has not been submitted in whole or part for a \@degreeorunit\ in any university.
-\par
-\vspace{.5in}
-\hbox to 4in{\hfil\shortstack{\vrule width 3in height 0.4pt \\ \@author}}
-\end{minipage}
-\end{center}
-  \par\vfil\null
-  }
-  \cleardoublepage
-  }
 }
+}
+
+\newcommand{\makestatement}{%
+{\newpage
+\if@twocolumn
+\@restonecoltrue\onecolumn
+\else
+  \@restonecolfalse
+\fi
+{
+  \begin{center}
+  \textbf{Statement of Originality}\par
+  \end{center}
+  \vskip.5cm
+  \@statement
+  \par
+  \vspace{.5in}
+  \par\noindent(Signed)\makebox[2.5in]{\hrulefill}  \hskip2cm Date: \makebox[2.0in]{\hrulefill}%
+  \par\noindent\makebox[2.5in][l]{\@author}
+  \par\vfil\null
+  \cleardoublepage
+}{\clearpage \if@restonecol\twocolumn\fi}%
+}
+} 
+%% Signature page
+  
 
 % From JSS
 % Added by CII
@@ -367,6 +377,7 @@ has not been submitted in whole or part for a \@degreeorunit\ in any university.
 %\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 %\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
 \newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
+\newcommand{\Statement}[1]{\def\@Statement{#1}}
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\LOP}[1]{\def\@LOP{#1}}
 % End of CII add

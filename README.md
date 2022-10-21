@@ -49,4 +49,31 @@ Note that this will currently only Knit if you name the directory index as shown
 
 *NOTE: If you've used this template to write your thesis, drop me a line at thomas.fung.dr@gmail.com and I'll add a link to showcase it!*
 
+### This template would satisfy the following formating requirement 
+
+#### Presentation and formatting
+- in A4 pdf format
+- 1.5 spacing
+- meant to be printed as one-sided
+- margins of 3cm on the left border, 1.5cm on the right border and 1.5cm on the top and bottom
+- pages numbered consecutively
+
+
+#### Preliminary pages
+
+The preliminary pages will be organised in the following order (some items can be removed):
+
+- A title page with:
+    - the thesis title
+    - your names and degrees
+    - your university department
+    - date of submission/re-submission.
+- a table of content
+- a list of tables
+- a list of figures
+- an abstract 
+- A signed statement of originality (following this [template](https://students.mq.edu.au/__data/assets/word_doc/0004/1141276/statement-of-originality-example.docx))
+    - **you will have to add in your own Ethics Committee approval and protocol number (if applicable)**
+- anknowledgement
+- the written component of the thesis
 

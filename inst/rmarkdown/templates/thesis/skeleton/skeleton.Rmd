@@ -1,13 +1,14 @@
 ---
 # This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ). 
 # Originally created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
+# Updated by Thomas Fung (MQ) (21 Oct 2022) to follow the latest formating guideline.
 author: 'Your Name'
 date: 'May' # just need the month. Year will be added automatically. 
 institution: 'Macquarie University' 
 report_type: 'thesis' # is this a paper/report/thesis? 
 division: "Examiner's Copy"
 # replace above with " " if this is not an examiner's copy
-department: 'Mathematics and Statistics'
+department: 'School of Mathematical & Physical Sciences'
 degree_or_unit: 'degree' # or 'unit'
 degree_name_or_unit_no: 'Master of Research' # or 'STAT825'
 notopenright: false #new chapter always opens on the right; to disable this, 
@@ -25,6 +26,10 @@ abstract: |
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab is 
 # needed on the line after the |.
+statement: |
+  This work has not previously been submitted for a degree or diploma in any university. To the best of my knowledge and belief, the thesis contains no material previously published or written by another person except where due reference is made in the thesis itself.
+# If your report type is not a thesis, you have to update the statement accordingly. 
+# According to the MQ guidelines, you can also add in your Ethics Committee approval and protocol number here (if applicable).
 acknowledgements: |
   I want to thank a few people.
 dedication: |
@@ -47,6 +52,7 @@ lof: true
 <!--
 This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ). 
 Created by Thomas Fung & Justin Wishart (MQ) (15 June 2018). 
+Updated by Thomas Fung (MQ) (21 Oct 2022) to reflect the latest formating guidelines.
 -->
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!

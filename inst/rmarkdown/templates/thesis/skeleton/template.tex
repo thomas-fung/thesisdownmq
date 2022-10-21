@@ -1,4 +1,5 @@
 % This is a part of the Rmarkdown thesis template for Statistics at Macquarie University (MQ)
+% Updated by Thomas Fung (MQ) (21 Oct 2022) to be consistent with the latest formating guideline. 
 % Created by Thomas Fung & Justin Wishart (MQ) (04 June 2018). 
 
 % Most of the work for the document class was done by Sam Noble (SN), as well as this
@@ -26,7 +27,7 @@
 %% Preamble
 %%
 % \documentclass{<something>} must begin each LaTeX document
-\documentclass[12pt,twoside, a4paper]{reedthesis}
+\documentclass[12pt, oneside, a4paper]{reedthesis}
 % Packages are extensions to the basic LaTeX functions. Whatever you
 % want to typeset, there is probably a package out there for it.
 % Chemistry (chemtex), screenplays, you name it.
@@ -47,7 +48,7 @@
 \usepackage{calc}
 % End of CII addition
 \usepackage{rotating}
-\usepackage[top=1.5cm, bottom=2.0cm, inner=3.5cm, outer=2.0cm, includehead]{geometry}
+\usepackage[top=1.5cm, bottom=1.5cm, inner=3cm, outer=1.5cm, includehead]{geometry}
 % Next line commented out by CII
 %%% \usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
@@ -64,6 +65,7 @@
 \def\sectionautorefname{Section}
 \def\subsectionautorefname{Subsection}
 % End of CII addition
+
 
 % Added by CII
 \usepackage{caption}
@@ -88,7 +90,7 @@ $endif$
 \reporttype{$report_type$}
 \degreeorunit{$degree_or_unit$}
 \degreename{$degree_name_or_unit_no$} 
-
+\statement{$statement$}
 %If you have two advisors for some reason, you can use the following
 % Uncommented out by CII
 $if(altadvisor)$
@@ -201,18 +203,6 @@ $endif$
 \frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
 
-$if(acknowledgements)$
-  \begin{acknowledgements}
-    $acknowledgements$
-  \end{acknowledgements}
-$endif$
-
-$if(preface)$
-  \begin{preface}
-    $preface$
-  \end{preface}
-$endif$
-
 $if(toc)$
   \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
   \setcounter{secnumdepth}{$toc-depth$}
@@ -233,6 +223,25 @@ $if(abstract)$
     $abstract$
   \end{abstract}
 $endif$
+
+
+$if(statement)$
+  \makestatement
+$endif$
+
+
+$if(acknowledgements)$
+  \begin{acknowledgements}
+    $acknowledgements$
+  \end{acknowledgements}
+$endif$
+
+$if(preface)$
+  \begin{preface}
+    $preface$
+  \end{preface}
+$endif$
+
 
 $if(dedication)$
   \begin{dedication}
