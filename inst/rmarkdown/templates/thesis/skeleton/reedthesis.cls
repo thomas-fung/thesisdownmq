@@ -167,7 +167,6 @@
                       \@afterheading
                     \fi}
 
-
 \newcommand{\RTcleardoublepage}{
 	\clearpage\if@twoside \ifodd\c@page\else
 	\thispagestyle{fancy}\hbox{}\newpage
@@ -178,9 +177,9 @@
 
 % adjust margins for binding  (changed 2007-04-24 tgp)
 \setlength{\oddsidemargin}{.5in}
-\setlength{\evensidemargin}{0in}
+\setlength{\evensidemargin}{0.0787in}
 \setlength{\textwidth}{6.0in}
-\setlength{\textheight}{9.0in}
+\setlength{\textheight}{9in}
 \setlength\topmargin{0in}
 \addtolength\topmargin{-\headheight}
 \addtolength\topmargin{-\headsep}
@@ -252,6 +251,18 @@
   \chapter*{Acknowledgements}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
+
+\newenvironment{statementoforiginality}{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \chapter*{Statement of Originality}
+  \fontsize{12}{14}\selectfont
+}{\clearpage \if@restonecol\twocolumn\fi}%
+
+
 
 
 \newenvironment{lop}{%
@@ -343,18 +354,20 @@
 }
 }
 
+
 \newcommand{\makestatement}{%
-{\newpage
+{
+%\newpage
 \if@twocolumn
 \@restonecoltrue\onecolumn
 \else
   \@restonecolfalse
 \fi
 {
-  \begin{center}
-  \textbf{Statement of Originality}\par
-  \end{center}
-  \vskip.5cm
+%  \begin{center}
+%  \textbf{Statement of Originality}\par
+ % \end{center}
+ % \vskip.5cm
   \@statement
   \par
   \vspace{.5in}

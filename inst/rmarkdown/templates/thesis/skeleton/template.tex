@@ -48,7 +48,7 @@
 \usepackage{calc}
 % End of CII addition
 \usepackage{rotating}
-\usepackage[top=1.5cm, bottom=1.5cm, inner=3cm, outer=1.5cm, includehead]{geometry}
+\usepackage[top=1.5cm, bottom=1.6cm, inner=3cm, outer=1.5cm, includehead]{geometry}
 % Next line commented out by CII
 %%% \usepackage{natbib}
 % Comment out the natbib line above and uncomment the following two lines to use the new
@@ -56,6 +56,9 @@
 % bibliography is included.
 %\usepackage{biblatex-chicago}
 %\bibliography{thesis}
+\makeatletter
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 0.78em{\hss .\hss }\hfill \kern \z@}
+\makeatother
 
 \renewcommand{\baselinestretch}{1.5}%
 % Added by CII (Thanks, Hadley!)
@@ -207,47 +210,58 @@ $if(toc)$
   \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
   \setcounter{secnumdepth}{$toc-depth$}
   \setcounter{tocdepth}{$toc-depth$}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
   \tableofcontents
+\pagenumbering{gobble}
 $endif$
 
 $if(lot)$
   \listoftables
+  \addcontentsline{toc}{chapter}{List of Tables}  
+  \pagenumbering{roman}
 $endif$
 
 $if(lof)$
   \listoffigures
+  \addcontentsline{toc}{chapter}{List of Figures}
+  \clearpage  
 $endif$
 
 $if(abstract)$
+ \addcontentsline{toc}{chapter}{Abstract}
   \begin{abstract}
     $abstract$
   \end{abstract}
+   \clearpage
 $endif$
 
 
 $if(statement)$
+  \addcontentsline{toc}{chapter}{Statement of Originality}
+\begin{statementoforiginality}
   \makestatement
+ \end{statementoforiginality}
+ \clearpage
 $endif$
 
 
 $if(acknowledgements)$
+  \addcontentsline{toc}{chapter}{Acknowledgements}
   \begin{acknowledgements}
     $acknowledgements$
   \end{acknowledgements}
-$endif$
-
-$if(preface)$
-  \begin{preface}
-    $preface$
-  \end{preface}
+\clearpage
 $endif$
 
 
 $if(dedication)$
+  \addcontentsline{toc}{chapter}{Dedication}
   \begin{dedication}
     $dedication$
   \end{dedication}
+    \clearpage
 $endif$
+
 
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on

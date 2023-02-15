@@ -55,7 +55,7 @@ Note that this will currently only Knit if you name the directory index as shown
 - in A4 pdf format
 - 1.5 spacing
 - meant to be printed as one-sided
-- margins of 3cm on the left border, 1.5cm on the right border and 1.5cm on the top and bottom
+- margins of at least 3cm on the left border, at least 1.5cm on the right border and at least 1.5cm on the top and bottom
 - pages numbered consecutively
 
 
@@ -74,6 +74,6 @@ The preliminary pages will be organised in the following order (some items can b
 - an abstract 
 - A signed statement of originality (following this [template](https://students.mq.edu.au/__data/assets/word_doc/0004/1141276/statement-of-originality-example.docx))
     - **you will have to add in your own Ethics Committee approval and protocol number (if applicable)**
-- anknowledgement
+- acknowledgement
 - the written component of the thesis
 
